@@ -3,29 +3,28 @@ import Base from '../layouts/Base.astro';
 import '../styles/global.css';
 ---
 
-<Base>
+<Base
+  title="Ainjiner — AI Engineering for Education & Society"
+  description="Open-source AI tools built in Indonesia. Seeking donors, research partners, and institutional funding to develop 2USE, We Will Shine, and AI Lab."
+>
   <!-- NAV -->
   <header class="sticky top-0 z-50 border-b border-[#27272a] bg-[#09090b]/80 backdrop-blur-xl">
     <div class="mx-auto max-w-6xl px-6 h-14 flex items-center justify-between">
       <a href="/" class="flex items-center gap-2.5 font-semibold text-sm tracking-tight">
-        <svg width="26" height="26" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="26" height="26" viewBox="0 0 64 64" fill="none">
           <rect width="64" height="64" rx="14" fill="#8b5cf6"/>
           <text x="32" y="45" font-family="Georgia,serif" font-size="36" font-weight="700" fill="white" text-anchor="middle">A</text>
         </svg>
         <span class="text-[#fafafa]">ainjiner</span>
       </a>
       <nav class="flex items-center gap-1">
-        <a href="#projects" class="px-3 py-1.5 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors">Projects</a>
-        <a href="#mission" class="px-3 py-1.5 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors hidden sm:inline-flex">Mission</a>
-        <a href="#support" class="px-3 py-1.5 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors">Support</a>
-        <a
-          href="https://github.com/ainjiner"
-          target="_blank"
-          rel="noopener"
-          class="ml-2 flex items-center gap-1.5 px-3 py-1.5 text-sm text-[#fafafa] bg-[#18181b] border border-[#27272a] rounded-lg hover:border-[#3f3f46] transition-colors"
-        >
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          GitHub
+        <a href="#projects"  class="px-3 py-1.5 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors hidden sm:inline-flex">Projects</a>
+        <a href="#impact"    class="px-3 py-1.5 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors hidden sm:inline-flex">Impact</a>
+        <a href="#research"  class="px-3 py-1.5 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors hidden sm:inline-flex">Research</a>
+        <a href="#support"   class="px-3 py-1.5 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors">Support</a>
+        <a href="mailto:hello@ainjiner.ai"
+           class="ml-2 flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-white bg-[#8b5cf6] rounded-lg hover:bg-[#7c3aed] transition-colors">
+          Contact Us
         </a>
       </nav>
     </div>
@@ -33,64 +32,134 @@ import '../styles/global.css';
 
   <!-- HERO -->
   <section class="relative overflow-hidden px-6 pt-24 pb-20 text-center">
-    <!-- subtle radial glow -->
     <div class="pointer-events-none absolute inset-0 flex items-start justify-center">
-      <div class="mt-[-60px] h-[480px] w-[800px] rounded-full bg-[#8b5cf6]/10 blur-[120px]"></div>
+      <div class="mt-[-80px] h-[500px] w-[900px] rounded-full bg-[#8b5cf6]/10 blur-[130px]"></div>
     </div>
-    <!-- grid dots bg -->
-    <div class="pointer-events-none absolute inset-0 opacity-[0.03]"
-      style="background-image: radial-gradient(#fafafa 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <div class="pointer-events-none absolute inset-0 opacity-[0.025]"
+      style="background-image: radial-gradient(#fafafa 1px, transparent 1px); background-size: 28px 28px;"></div>
 
     <div class="relative mx-auto max-w-3xl">
-      <!-- badge -->
-      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-[#8b5cf6]/25 bg-[#8b5cf6]/10 px-3.5 py-1 text-xs font-medium text-[#a78bfa]">
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-[#8b5cf6]/25 bg-[#8b5cf6]/10 px-4 py-1.5 text-xs font-medium text-[#a78bfa]">
         <span class="h-1.5 w-1.5 rounded-full bg-[#a78bfa] animate-pulse"></span>
-        Open Source · Indonesia 🇮🇩
+        Seeking Donors · Research Partners · Institutional Funding
       </div>
 
-      <h1 class="mb-5 text-4xl font-bold tracking-tight text-[#fafafa] sm:text-5xl md:text-6xl leading-[1.08]">
-        Building tools for<br />
+      <h1 class="mb-5 text-4xl font-bold tracking-tight text-[#fafafa] sm:text-5xl md:text-[3.5rem] leading-[1.08]">
+        Open-source AI tools<br/>
         <span class="bg-gradient-to-br from-[#a78bfa] via-[#818cf8] to-[#60a5fa] bg-clip-text text-transparent">
-          AI/ML developers
+          built for Indonesia
         </span>
       </h1>
 
-      <p class="mx-auto mb-9 max-w-xl text-base text-[#a1a1aa] leading-relaxed sm:text-lg">
-        Ainjiner is an open-source engineering organization creating tools that empower developers
-        to build, manage, and deploy AI systems — without the lock-in.
+      <p class="mx-auto mb-4 max-w-2xl text-base text-[#a1a1aa] leading-relaxed sm:text-lg">
+        We build free, open-source AI infrastructure and education tools for underserved communities.
+        Three active projects. Real students and educators as users. Zero external funding — yet.
+      </p>
+      <p class="mx-auto mb-9 max-w-xl text-sm text-[#71717a] leading-relaxed">
+        Your support — whether a donation, a research grant, or a partnership — directly accelerates
+        tools that help Indonesian students think critically, find their path, and access AI without dependency.
       </p>
 
-      <div class="flex flex-wrap items-center justify-center gap-3 mb-14">
-        <a
-          href="#projects"
-          class="inline-flex items-center gap-2 rounded-xl bg-[#8b5cf6] px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-[#8b5cf6]/25 hover:bg-[#7c3aed] transition-all hover:-translate-y-px"
-        >
-          Explore Projects
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-16">
+        <a href="#support"
+           class="inline-flex items-center gap-2 rounded-xl bg-[#8b5cf6] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#8b5cf6]/25 hover:bg-[#7c3aed] transition-all hover:-translate-y-px">
+          Support This Work
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a
-          href="#support"
-          class="inline-flex items-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-5 py-2.5 text-sm font-medium text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#3f3f46] transition-all hover:-translate-y-px"
-        >
-          Support Our Work
+        <a href="#research"
+           class="inline-flex items-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-6 py-3 text-sm font-medium text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#3f3f46] transition-all hover:-translate-y-px">
+          Research & Grants
+        </a>
+        <a href="#projects"
+           class="inline-flex items-center gap-2 rounded-xl border border-[#27272a] bg-transparent px-6 py-3 text-sm font-medium text-[#71717a] hover:text-[#a1a1aa] hover:border-[#3f3f46] transition-all">
+          Explore Projects
         </a>
       </div>
 
-      <!-- stats -->
-      <div class="flex items-center justify-center gap-8 flex-wrap">
+      <!-- trust bar -->
+      <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
         <div class="text-center">
           <div class="text-2xl font-bold text-[#fafafa] tracking-tight">3</div>
-          <div class="text-xs text-[#71717a] mt-0.5">Open Source Projects</div>
+          <div class="text-xs text-[#71717a] mt-0.5">Active Projects</div>
         </div>
         <div class="h-8 w-px bg-[#27272a] hidden sm:block"></div>
         <div class="text-center">
           <div class="text-2xl font-bold text-[#fafafa] tracking-tight">MIT</div>
-          <div class="text-xs text-[#71717a] mt-0.5">Licensed</div>
+          <div class="text-xs text-[#71717a] mt-0.5">Open License</div>
         </div>
         <div class="h-8 w-px bg-[#27272a] hidden sm:block"></div>
         <div class="text-center">
-          <div class="text-2xl font-bold text-[#fafafa] tracking-tight">∞</div>
-          <div class="text-xs text-[#71717a] mt-0.5">Community Driven</div>
+          <div class="text-2xl font-bold text-[#fafafa] tracking-tight">100%</div>
+          <div class="text-xs text-[#71717a] mt-0.5">Transparent Finances</div>
+        </div>
+        <div class="h-8 w-px bg-[#27272a] hidden sm:block"></div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-[#fafafa] tracking-tight">🇮🇩</div>
+          <div class="text-xs text-[#71717a] mt-0.5">Indonesia-based</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY FUND US -->
+  <section id="impact" class="border-y border-[#27272a] bg-[#0f0f11] px-6 py-20">
+    <div class="mx-auto max-w-6xl">
+      <div class="mb-14 text-center">
+        <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-xs text-[#71717a]">
+          Why Fund Us
+        </div>
+        <h2 class="mb-3 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">The problem we are solving</h2>
+        <p class="mx-auto max-w-xl text-[#a1a1aa] text-base leading-relaxed">
+          Indonesia has 277 million people, 45 million students, and a fast-growing AI sector —
+          but almost no open-source AI tooling built for its context.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-3 mb-10">
+        <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-6">
+          <div class="mb-4 text-3xl font-bold text-[#a78bfa]">45M+</div>
+          <h4 class="mb-2 text-sm font-semibold text-[#fafafa]">Students in Indonesia</h4>
+          <p class="text-xs text-[#71717a] leading-relaxed">
+            Lack access to AI-powered career guidance and mental health support tools designed
+            for their language, culture, and economic context.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-6">
+          <div class="mb-4 text-3xl font-bold text-[#fbbf24]">0</div>
+          <h4 class="mb-2 text-sm font-semibold text-[#fafafa]">Critical-thinking AI tools</h4>
+          <p class="text-xs text-[#71717a] leading-relaxed">
+            Mainstream AI tools breed dependency. No open-source middleware exists that
+            actively teaches Socratic thinking before providing answers.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-6">
+          <div class="mb-4 text-3xl font-bold text-[#34d399]">$0</div>
+          <h4 class="mb-2 text-sm font-semibold text-[#fafafa]">External funding received</h4>
+          <p class="text-xs text-[#71717a] leading-relaxed">
+            Everything built so far is self-funded and volunteer-driven. Funding unlocks
+            full-time development, research, and community outreach.
+          </p>
+        </div>
+      </div>
+
+      <!-- what funding unlocks -->
+      <div class="rounded-2xl border border-[#8b5cf6]/20 bg-[#8b5cf6]/5 p-8">
+        <h3 class="mb-6 text-base font-semibold text-[#fafafa]">What your funding unlocks</h3>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { icon: '⚡', label: 'Full-time dev', desc: 'Move from nights-and-weekends to full-time shipping' },
+            { icon: '🏫', label: 'School pilots', desc: 'Run We Will Shine pilots in Indonesian high schools' },
+            { icon: '🔬', label: 'Research output', desc: 'Publish findings on AI & critical thinking in EdTech' },
+            { icon: '🌐', label: 'Community', desc: 'Grow a local open-source AI developer community' },
+          ].map(item => (
+            <div class="flex gap-3">
+              <div class="mt-0.5 text-xl shrink-0">{item.icon}</div>
+              <div>
+                <div class="text-sm font-medium text-[#fafafa] mb-1">{item.label}</div>
+                <div class="text-xs text-[#71717a] leading-relaxed">{item.desc}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -100,70 +169,27 @@ import '../styles/global.css';
   <section id="projects" class="px-6 py-20">
     <div class="mx-auto max-w-6xl">
       <div class="mb-14 text-center">
-        <h2 class="mb-3 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">Our Projects</h2>
+        <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-xs text-[#71717a]">
+          The Projects
+        </div>
+        <h2 class="mb-3 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">Three tools, one mission</h2>
         <p class="mx-auto max-w-lg text-[#a1a1aa] text-base leading-relaxed">
-          Three tools, one mission — making AI development more humane, transparent, and accessible.
+          Making AI development and education more humane, transparent, and accessible.
         </p>
       </div>
 
       <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
 
-        <!-- AI Lab -->
-        <article class="group relative flex flex-col rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#8b5cf6]/40 hover:shadow-xl hover:shadow-[#8b5cf6]/5">
-          <!-- top glow on hover -->
-          <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8b5cf6]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-t-2xl"></div>
-
-          <div class="mb-4 flex items-start justify-between">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#8b5cf6] to-[#6d28d9] shadow-lg shadow-[#8b5cf6]/20">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-            </div>
-            <div class="flex gap-1.5">
-              <span class="rounded-full border border-[#8b5cf6]/20 bg-[#8b5cf6]/10 px-2 py-0.5 text-[10px] font-medium text-[#a78bfa]">ML/LLM</span>
-              <span class="rounded-full border border-[#8b5cf6]/20 bg-[#8b5cf6]/10 px-2 py-0.5 text-[10px] font-medium text-[#a78bfa]">Platform</span>
-            </div>
+        <!-- 2USE — highlighted as primary funding target -->
+        <article class="group relative flex flex-col rounded-2xl border border-[#f59e0b]/30 bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-[#f59e0b]/5 md:col-span-1">
+          <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#f59e0b]/60 to-transparent rounded-t-2xl"></div>
+          <div class="absolute top-4 right-4">
+            <span class="rounded-full bg-[#f59e0b]/15 border border-[#f59e0b]/30 px-2 py-0.5 text-[10px] font-semibold text-[#fbbf24] uppercase tracking-wider">Core Focus</span>
           </div>
 
-          <h3 class="mb-2 text-base font-semibold text-[#fafafa]">AI Lab</h3>
-          <p class="mb-4 text-sm text-[#71717a] leading-relaxed">
-            ML/LLM Engineering Platform. Unified provider registry, model catalog, experiment tracking, and cost analytics with OpenCode-native config sync.
-          </p>
-
-          <ul class="mb-6 flex flex-col gap-1.5 flex-1">
-            {[
-              '10 built-in providers (OpenAI, Anthropic, Gemini…)',
-              'Experiment tracking + cost analytics',
-              'Config sync to OpenCode, Cursor, Continue',
-              'REST API + CLI + Web UI — self-hosted',
-            ].map(item => (
-              <li class="flex items-start gap-2 text-xs text-[#71717a]">
-                <svg class="mt-0.5 shrink-0 text-[#8b5cf6]" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          <a
-            href="https://github.com/ainjiner/ai-lab"
-            target="_blank"
-            rel="noopener"
-            class="flex items-center justify-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-4 py-2.5 text-xs font-medium text-[#a1a1aa] hover:border-[#8b5cf6]/40 hover:text-[#a78bfa] transition-colors"
-          >
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            View on GitHub
-          </a>
-        </article>
-
-        <!-- 2USE -->
-        <article class="group relative flex flex-col rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#f59e0b]/40 hover:shadow-xl hover:shadow-[#f59e0b]/5">
-          <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#f59e0b]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-t-2xl"></div>
-
-          <div class="mb-4 flex items-start justify-between">
+          <div class="mb-4 flex items-start">
             <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#f59e0b] to-[#d97706] shadow-lg shadow-[#f59e0b]/20">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3m.08 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <div class="flex gap-1.5">
-              <span class="rounded-full border border-[#f59e0b]/20 bg-[#f59e0b]/10 px-2 py-0.5 text-[10px] font-medium text-[#fbbf24]">EdTech</span>
-              <span class="rounded-full border border-[#f59e0b]/20 bg-[#f59e0b]/10 px-2 py-0.5 text-[10px] font-medium text-[#fbbf24]">Middleware</span>
             </div>
           </div>
 
@@ -172,15 +198,14 @@ import '../styles/global.css';
             <span class="ml-1.5 font-mono text-[10px] font-normal text-[#71717a] tracking-wide">/ double-u-es /</span>
           </h3>
           <p class="mb-4 text-sm text-[#71717a] leading-relaxed">
-            AI middleware that refuses instant answers. Teaches critical thinking through Socratic method. Anti-dependency by design.
+            AI middleware that refuses instant answers. Forces critical thinking through Socratic method before any LLM responds. Anti-dependency by design.
           </p>
-
-          <ul class="mb-6 flex flex-col gap-1.5 flex-1">
+          <ul class="mb-6 flex flex-col gap-2 flex-1">
             {[
-              'Intercepts queries, responds with questions first',
-              'Forces deeper engagement before answering',
+              'Intercepts AI queries — asks clarifying questions first',
               'Pluggable into any LLM pipeline as middleware',
-              'Designed for students and educators',
+              'Designed for students, educators, and edtech platforms',
+              'Research foundation: Socratic pedagogy + AI alignment',
             ].map(item => (
               <li class="flex items-start gap-2 text-xs text-[#71717a]">
                 <svg class="mt-0.5 shrink-0 text-[#f59e0b]" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
@@ -188,13 +213,13 @@ import '../styles/global.css';
               </li>
             ))}
           </ul>
-
-          <a
-            href="https://github.com/ainjiner/2USE"
-            target="_blank"
-            rel="noopener"
-            class="flex items-center justify-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-4 py-2.5 text-xs font-medium text-[#a1a1aa] hover:border-[#f59e0b]/40 hover:text-[#fbbf24] transition-colors"
-          >
+          <div class="mb-3 rounded-xl bg-[#f59e0b]/8 border border-[#f59e0b]/15 px-4 py-3">
+            <p class="text-xs text-[#a1a1aa] leading-relaxed">
+              <span class="font-medium text-[#fbbf24]">Research opportunity:</span> 2USE is a novel application of Socratic AI — suitable for EdTech, HCI, and AI Ethics research grants.
+            </p>
+          </div>
+          <a href="https://github.com/ainjiner/2USE" target="_blank" rel="noopener"
+             class="flex items-center justify-center gap-2 rounded-xl border border-[#f59e0b]/25 bg-[#18181b] px-4 py-2.5 text-xs font-medium text-[#a1a1aa] hover:border-[#f59e0b]/50 hover:text-[#fbbf24] transition-colors">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             View on GitHub
           </a>
@@ -203,31 +228,25 @@ import '../styles/global.css';
         <!-- We Will Shine -->
         <article class="group relative flex flex-col rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#10b981]/40 hover:shadow-xl hover:shadow-[#10b981]/5">
           <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#10b981]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-t-2xl"></div>
-
           <div class="mb-4 flex items-start justify-between">
             <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#10b981] to-[#059669] shadow-lg shadow-[#10b981]/20">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <div class="flex gap-1.5">
-              <span class="rounded-full border border-[#10b981]/20 bg-[#10b981]/10 px-2 py-0.5 text-[10px] font-medium text-[#34d399]">Education</span>
-              <span class="rounded-full border border-[#10b981]/20 bg-[#10b981]/10 px-2 py-0.5 text-[10px] font-medium text-[#34d399]">Indonesia</span>
-            </div>
+            <span class="rounded-full border border-[#10b981]/20 bg-[#10b981]/10 px-2 py-0.5 text-[10px] font-medium text-[#34d399]">Live</span>
           </div>
-
           <h3 class="mb-1 text-base font-semibold text-[#fafafa]">
             We Will Shine
             <span class="ml-1.5 font-mono text-[10px] font-normal text-[#71717a] tracking-wide">/ W·S /</span>
           </h3>
           <p class="mb-4 text-sm text-[#71717a] leading-relaxed">
-            Open-source platform for career guidance & student wellbeing with an AI mentor for Indonesian students and school counselors.
+            AI-powered career guidance and student wellbeing platform for Indonesian students and school counselors (Guru BK).
           </p>
-
-          <ul class="mb-6 flex flex-col gap-1.5 flex-1">
+          <ul class="mb-6 flex flex-col gap-2 flex-1">
             {[
-              'AI-powered career guidance for students',
-              'Safe, anonymous counseling & journaling',
-              'Dashboard for school counselors (Guru BK)',
-              'Built with SvelteKit + Tailwind, MIT licensed',
+              'AI career guidance in Bahasa Indonesia',
+              'Safe anonymous journaling & counseling space',
+              'Counselor dashboard with wellbeing insights',
+              'Built with SvelteKit — fully open source & MIT licensed',
             ].map(item => (
               <li class="flex items-start gap-2 text-xs text-[#71717a]">
                 <svg class="mt-0.5 shrink-0 text-[#10b981]" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
@@ -235,211 +254,296 @@ import '../styles/global.css';
               </li>
             ))}
           </ul>
-
           <div class="flex gap-2">
-            <a
-              href="https://github.com/ainjiner/we-will-shine"
-              target="_blank"
-              rel="noopener"
-              class="flex flex-1 items-center justify-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-4 py-2.5 text-xs font-medium text-[#a1a1aa] hover:border-[#10b981]/40 hover:text-[#34d399] transition-colors"
-            >
+            <a href="https://github.com/ainjiner/we-will-shine" target="_blank" rel="noopener"
+               class="flex flex-1 items-center justify-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-4 py-2.5 text-xs font-medium text-[#a1a1aa] hover:border-[#10b981]/40 hover:text-[#34d399] transition-colors">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
               GitHub
             </a>
-            <a
-              href="https://ainjiner.github.io/we-will-shine/"
-              target="_blank"
-              rel="noopener"
-              class="flex items-center justify-center gap-1.5 rounded-xl border border-[#10b981]/25 bg-[#10b981]/10 px-4 py-2.5 text-xs font-medium text-[#34d399] hover:bg-[#10b981]/20 transition-colors"
-            >
-              Live
+            <a href="https://ainjiner.github.io/we-will-shine/" target="_blank" rel="noopener"
+               class="flex items-center justify-center gap-1.5 rounded-xl border border-[#10b981]/25 bg-[#10b981]/10 px-4 py-2.5 text-xs font-medium text-[#34d399] hover:bg-[#10b981]/20 transition-colors">
+              Live Demo
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
             </a>
           </div>
+        </article>
+
+        <!-- AI Lab -->
+        <article class="group relative flex flex-col rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#8b5cf6]/40 hover:shadow-xl hover:shadow-[#8b5cf6]/5">
+          <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8b5cf6]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-t-2xl"></div>
+          <div class="mb-4 flex items-start justify-between">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#8b5cf6] to-[#6d28d9] shadow-lg shadow-[#8b5cf6]/20">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            </div>
+            <div class="flex gap-1.5">
+              <span class="rounded-full border border-[#8b5cf6]/20 bg-[#8b5cf6]/10 px-2 py-0.5 text-[10px] font-medium text-[#a78bfa]">ML/LLM</span>
+            </div>
+          </div>
+          <h3 class="mb-1 text-base font-semibold text-[#fafafa]">AI Lab</h3>
+          <p class="mb-4 text-sm text-[#71717a] leading-relaxed">
+            ML/LLM Engineering Platform. Unified provider registry, model catalog, experiment tracking, and cost analytics — self-hosted, no proxy.
+          </p>
+          <ul class="mb-6 flex flex-col gap-2 flex-1">
+            {[
+              '10 built-in providers — OpenAI, Anthropic, Gemini, Groq…',
+              'Experiment tracking with cost and latency analytics',
+              'Config sync to OpenCode, Cursor, Continue, Aider',
+              'REST API + CLI + Web UI — fully self-hosted',
+            ].map(item => (
+              <li class="flex items-start gap-2 text-xs text-[#71717a]">
+                <svg class="mt-0.5 shrink-0 text-[#8b5cf6]" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a href="https://github.com/ainjiner/ai-lab" target="_blank" rel="noopener"
+             class="flex items-center justify-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-4 py-2.5 text-xs font-medium text-[#a1a1aa] hover:border-[#8b5cf6]/40 hover:text-[#a78bfa] transition-colors">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- MISSION -->
-  <section id="mission" class="border-y border-[#27272a] bg-[#0f0f11] px-6 py-20">
+  <!-- RESEARCH & GRANTS -->
+  <section id="research" class="border-y border-[#27272a] bg-[#0f0f11] px-6 py-20">
     <div class="mx-auto max-w-6xl">
       <div class="mb-14 text-center">
-        <h2 class="mb-3 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">Our Mission</h2>
-        <p class="mx-auto max-w-md text-[#a1a1aa] text-base leading-relaxed">
-          Why we build what we build.
+        <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-xs text-[#71717a]">
+          Research & Institutional Funding
+        </div>
+        <h2 class="mb-3 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">For researchers & institutions</h2>
+        <p class="mx-auto max-w-xl text-[#a1a1aa] text-base leading-relaxed">
+          Our projects sit at the intersection of AI, education, and social impact —
+          making them strong candidates for academic research and institutional grants.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- research angles -->
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-10">
         {[
-          { icon: '🌍', title: 'Democratize AI Tools', desc: 'Make ML/LLM engineering accessible to every developer — not just those at large companies with big budgets.' },
-          { icon: '🔓', title: 'Open Source First', desc: 'All tools are MIT licensed and community-driven. No paywalls, no vendor lock-in, no hidden agendas.' },
-          { icon: '🧠', title: 'Teach, Don\'t Depend', desc: 'AI should augment human thinking, not replace it. Our tools are designed to foster independent thought.' },
-          { icon: '🇮🇩', title: 'Built in Indonesia', desc: 'Proudly built by Indonesian developers, with love for the local education and tech ecosystem.' },
+          {
+            color: '#f59e0b',
+            icon: '🧠',
+            area: 'AI Ethics & Pedagogy',
+            desc: '2USE raises novel questions: Can AI middleware reduce cognitive dependency? How does Socratic prompting affect learning outcomes? Publishable as HCI or EdTech research.',
+            tags: ['Socratic AI', 'LLM Alignment', 'EdTech'],
+          },
+          {
+            color: '#10b981',
+            icon: '🏫',
+            area: 'Student Wellbeing & Guidance',
+            desc: 'We Will Shine addresses a critical gap in school counseling infrastructure. Suitable for social science, educational psychology, and public health research.',
+            tags: ['Mental Health', 'Career Guidance', 'Indonesia'],
+          },
+          {
+            color: '#8b5cf6',
+            icon: '⚙️',
+            area: 'ML/LLM Observability',
+            desc: 'AI Lab provides open infrastructure for multi-provider LLM experiment tracking — useful for reproducibility research and AI cost studies.',
+            tags: ['LLMOps', 'Reproducibility', 'Open Infrastructure'],
+          },
         ].map(item => (
-          <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-5">
-            <div class="mb-3 text-2xl">{item.icon}</div>
-            <h4 class="mb-2 text-sm font-semibold text-[#fafafa]">{item.title}</h4>
-            <p class="text-xs text-[#71717a] leading-relaxed">{item.desc}</p>
+          <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-6 flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <div class="text-2xl">{item.icon}</div>
+              <h4 class="text-sm font-semibold text-[#fafafa]">{item.area}</h4>
+            </div>
+            <p class="text-xs text-[#71717a] leading-relaxed flex-1">{item.desc}</p>
+            <div class="flex flex-wrap gap-1.5">
+              {item.tags.map(tag => (
+                <span class="rounded-full border border-[#27272a] bg-[#09090b] px-2.5 py-0.5 text-[10px] text-[#71717a]">{tag}</span>
+              ))}
+            </div>
           </div>
         ))}
+      </div>
+
+      <!-- grant sources -->
+      <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-8">
+        <h3 class="mb-6 text-sm font-semibold text-[#fafafa]">Funding sources we are pursuing — and where you can help</h3>
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { org: 'Ford Foundation', focus: 'Digital rights, education equity in Global South', fit: 'We Will Shine + 2USE' },
+            { org: 'Mozilla Foundation', focus: 'Open-source, responsible AI, Trustworthy AI grants', fit: 'All three projects' },
+            { org: 'NLnet Foundation', focus: 'Open internet, open-source infrastructure', fit: 'AI Lab + 2USE' },
+            { org: 'DIKTI / Kemdikbud', focus: 'Indonesian higher-ed & student innovation grants', fit: 'We Will Shine + 2USE' },
+            { org: 'Google.org', focus: 'Tech nonprofits, education, AI for good', fit: 'We Will Shine' },
+            { org: 'Open Society Foundations', focus: 'Education, democratic participation', fit: '2USE + We Will Shine' },
+            { org: 'GitHub Fund', focus: 'Early-stage open-source projects', fit: 'All three projects' },
+            { org: 'USAID / Asia Foundation', focus: 'Indonesia development, youth education', fit: 'We Will Shine' },
+          ].map(item => (
+            <div class="rounded-xl border border-[#27272a] bg-[#09090b] p-4">
+              <div class="mb-1.5 text-xs font-semibold text-[#fafafa]">{item.org}</div>
+              <div class="mb-2 text-[11px] text-[#71717a] leading-relaxed">{item.focus}</div>
+              <div class="text-[10px] text-[#a78bfa] font-medium">{item.fit}</div>
+            </div>
+          ))}
+        </div>
+        <div class="mt-6 rounded-xl border border-[#8b5cf6]/20 bg-[#8b5cf6]/5 p-4">
+          <p class="text-xs text-[#a1a1aa] leading-relaxed">
+            <span class="font-medium text-[#a78bfa]">Know a program officer or grant committee?</span>{' '}
+            We can provide a research brief, technical documentation, or a live demo for any of these applications.
+            Reach out at{' '}
+            <a href="mailto:hello@ainjiner.ai" class="text-[#a78bfa] border-b border-[#8b5cf6]/30 hover:border-[#8b5cf6] transition-colors">hello@ainjiner.ai</a>.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SUPPORT / FUNDING -->
+  <!-- SUPPORT / DONATE -->
   <section id="support" class="px-6 py-20">
     <div class="mx-auto max-w-6xl">
       <div class="mb-14 text-center">
-        <h2 class="mb-3 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">Support Our Work</h2>
+        <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-xs text-[#71717a]">
+          Donate & Sponsor
+        </div>
+        <h2 class="mb-3 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">Support our work</h2>
         <p class="mx-auto max-w-lg text-[#a1a1aa] text-base leading-relaxed">
-          All three projects are free and open source. Your support directly funds development and infrastructure.
-          Every contribution — big or small — matters.
+          All projects are free and open source. Donations go directly to development, infrastructure,
+          and community outreach. 100% transparent via Open Collective.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-8">
-
-        <!-- GitHub Sponsors -->
-        <a
-          href="https://github.com/sponsors/ainjiner"
-          target="_blank"
-          rel="noopener"
-          class="group flex flex-col gap-4 rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#ec4899]/40 hover:shadow-lg hover:shadow-[#ec4899]/5"
-        >
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-6">
+        <a href="https://github.com/sponsors/ainjiner" target="_blank" rel="noopener"
+           class="group flex flex-col gap-4 rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#ec4899]/40 hover:shadow-lg hover:shadow-[#ec4899]/5">
           <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ec4899]/10 border border-[#ec4899]/20 text-[#ec4899]">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.593c-.425-.636-8.208-6.048-8.208-10.593 0-4.208 3.584-6 7.208-6 3.624 0 7.208 1.792 7.208 6C18.208 15.545 12.425 20.957 12 21.593z"/></svg>
           </div>
           <div class="flex-1">
-            <h4 class="mb-1.5 text-sm font-semibold text-[#fafafa]">GitHub Sponsors</h4>
-            <p class="text-xs text-[#71717a] leading-relaxed">Recurring or one-time. Your name appears on our repos as a sponsor.</p>
+            <h4 class="mb-1 text-sm font-semibold text-[#fafafa]">GitHub Sponsors</h4>
+            <p class="text-xs text-[#71717a] leading-relaxed">Recurring or one-time. Your name on our repos. Integrated directly into GitHub.</p>
           </div>
           <span class="flex items-center gap-1 text-xs font-medium text-[#ec4899] group-hover:gap-2 transition-all">
-            Sponsor on GitHub
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Sponsor on GitHub <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </span>
         </a>
 
-        <!-- Open Collective -->
-        <a
-          href="https://opencollective.com/ainjiner"
-          target="_blank"
-          rel="noopener"
-          class="group flex flex-col gap-4 rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#3b82f6]/40 hover:shadow-lg hover:shadow-[#3b82f6]/5"
-        >
+        <a href="https://opencollective.com/ainjiner" target="_blank" rel="noopener"
+           class="group flex flex-col gap-4 rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#3b82f6]/40 hover:shadow-lg hover:shadow-[#3b82f6]/5">
           <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3b82f6]/10 border border-[#3b82f6]/20 text-[#60a5fa]">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12a4 4 0 004 4 4 4 0 004-4 4 4 0 00-4-4"/></svg>
           </div>
           <div class="flex-1">
-            <h4 class="mb-1.5 text-sm font-semibold text-[#fafafa]">Open Collective</h4>
-            <p class="text-xs text-[#71717a] leading-relaxed">100% transparent finances. See exactly how every dollar is spent.</p>
+            <h4 class="mb-1 text-sm font-semibold text-[#fafafa]">Open Collective</h4>
+            <p class="text-xs text-[#71717a] leading-relaxed">100% transparent. See every dollar received and spent — ideal for institutional donors.</p>
           </div>
           <span class="flex items-center gap-1 text-xs font-medium text-[#60a5fa] group-hover:gap-2 transition-all">
-            Contribute transparently
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Contribute transparently <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </span>
         </a>
 
-        <!-- Ko-fi -->
-        <a
-          href="https://ko-fi.com/ainjiner"
-          target="_blank"
-          rel="noopener"
-          class="group flex flex-col gap-4 rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#f97316]/40 hover:shadow-lg hover:shadow-[#f97316]/5"
-        >
+        <a href="https://ko-fi.com/ainjiner" target="_blank" rel="noopener"
+           class="group flex flex-col gap-4 rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#f97316]/40 hover:shadow-lg hover:shadow-[#f97316]/5">
           <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f97316]/10 border border-[#f97316]/20 text-[#fb923c]">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
           </div>
           <div class="flex-1">
-            <h4 class="mb-1.5 text-sm font-semibold text-[#fafafa]">Ko-fi</h4>
-            <p class="text-xs text-[#71717a] leading-relaxed">Buy us a coffee. Simple one-time donations to show your appreciation.</p>
+            <h4 class="mb-1 text-sm font-semibold text-[#fafafa]">Ko-fi</h4>
+            <p class="text-xs text-[#71717a] leading-relaxed">Simple one-time donations. Buy us a coffee and keep the momentum going.</p>
           </div>
           <span class="flex items-center gap-1 text-xs font-medium text-[#fb923c] group-hover:gap-2 transition-all">
-            Buy a coffee
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Buy a coffee <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </span>
         </a>
 
-        <!-- Trakteer -->
-        <a
-          href="https://trakteer.id/ainjiner"
-          target="_blank"
-          rel="noopener"
-          class="group flex flex-col gap-4 rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#ef4444]/40 hover:shadow-lg hover:shadow-[#ef4444]/5"
-        >
+        <a href="https://trakteer.id/ainjiner" target="_blank" rel="noopener"
+           class="group flex flex-col gap-4 rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#ef4444]/40 hover:shadow-lg hover:shadow-[#ef4444]/5">
           <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ef4444]/10 border border-[#ef4444]/20 text-[#f87171]">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
           </div>
           <div class="flex-1">
-            <h4 class="mb-1.5 text-sm font-semibold text-[#fafafa]">Trakteer</h4>
-            <p class="text-xs text-[#71717a] leading-relaxed">Dukungan lokal dari Indonesia. Traktir kami untuk terus berkarya.</p>
+            <h4 class="mb-1 text-sm font-semibold text-[#fafafa]">Trakteer</h4>
+            <p class="text-xs text-[#71717a] leading-relaxed">Dukungan lokal dari Indonesia. Traktir kami untuk terus berkarya dan memberi dampak.</p>
           </div>
           <span class="flex items-center gap-1 text-xs font-medium text-[#f87171] group-hover:gap-2 transition-all">
-            Traktir sekarang
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Traktir sekarang <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </span>
         </a>
       </div>
 
-      <!-- Alt support note -->
       <div class="rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 text-center">
         <p class="text-sm text-[#71717a] leading-relaxed">
-          Not ready to donate? You can also help by{' '}
-          <a href="https://github.com/ainjiner" target="_blank" rel="noopener" class="text-[#a78bfa] hover:text-[#c4b5fd] border-b border-[#8b5cf6]/30 hover:border-[#8b5cf6] transition-colors">
-            starring our repos
-          </a>,
-          sharing our work, filing issues, or submitting pull requests.
-          Every bit of engagement helps the projects grow.
+          Not ready to donate? Star{' '}
+          <a href="https://github.com/ainjiner/ai-lab" target="_blank" rel="noopener" class="text-[#a78bfa] border-b border-[#8b5cf6]/30 hover:border-[#8b5cf6] transition-colors">AI Lab</a>,{' '}
+          <a href="https://github.com/ainjiner/2USE" target="_blank" rel="noopener" class="text-[#fbbf24] border-b border-[#f59e0b]/30 hover:border-[#f59e0b] transition-colors">2USE</a>, or{' '}
+          <a href="https://github.com/ainjiner/we-will-shine" target="_blank" rel="noopener" class="text-[#34d399] border-b border-[#10b981]/30 hover:border-[#10b981] transition-colors">We Will Shine</a>{' '}
+          on GitHub. Share with researchers, educators, or anyone who cares about responsible AI in education.
+          Every bit of visibility helps us reach funders.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / PARTNERSHIP CTA -->
+  <section class="border-t border-[#27272a] bg-[#0f0f11] px-6 py-20">
+    <div class="mx-auto max-w-3xl text-center">
+      <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-xs text-[#71717a]">
+        Get in Touch
+      </div>
+      <h2 class="mb-4 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">
+        Let's build something<br/>that matters
+      </h2>
+      <p class="mb-10 text-[#a1a1aa] text-base leading-relaxed max-w-xl mx-auto">
+        Whether you're a donor, a researcher, a university, an NGO, or a developer who wants to contribute —
+        we'd love to hear from you.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="mailto:hello@ainjiner.ai"
+           class="inline-flex items-center gap-2 rounded-xl bg-[#fafafa] px-6 py-3 text-sm font-semibold text-[#09090b] hover:bg-[#e4e4e7] transition-all hover:-translate-y-px shadow-lg">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          hello@ainjiner.ai
+        </a>
+        <a href="https://github.com/ainjiner" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-6 py-3 text-sm font-medium text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#3f3f46] transition-all hover:-translate-y-px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          github.com/ainjiner
+        </a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="border-t border-[#27272a] bg-[#0f0f11] px-6 pt-12 pb-8">
+  <footer class="border-t border-[#27272a] bg-[#09090b] px-6 pt-10 pb-8">
     <div class="mx-auto max-w-6xl">
-      <div class="mb-10 flex flex-col gap-8 sm:flex-row sm:justify-between">
-        <div class="flex flex-col gap-3">
+      <div class="mb-8 flex flex-col gap-8 sm:flex-row sm:justify-between">
+        <div class="flex flex-col gap-2">
           <a href="/" class="flex items-center gap-2.5 font-semibold text-sm text-[#fafafa]">
-            <svg width="24" height="24" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="22" height="22" viewBox="0 0 64 64" fill="none">
               <rect width="64" height="64" rx="14" fill="#8b5cf6"/>
               <text x="32" y="45" font-family="Georgia,serif" font-size="36" font-weight="700" fill="white" text-anchor="middle">A</text>
             </svg>
             ainjiner
           </a>
-          <p class="text-xs text-[#71717a] leading-relaxed max-w-[200px]">
-            AI Engineering Organization<br/>
-            Indonesia 🇮🇩
-          </p>
+          <p class="text-xs text-[#52525b] leading-relaxed max-w-[180px]">AI Engineering Organization · Indonesia 🇮🇩</p>
         </div>
-
-        <div class="flex gap-12 flex-wrap">
-          <div class="flex flex-col gap-2.5">
-            <h5 class="text-[10px] font-semibold uppercase tracking-widest text-[#52525b]">Projects</h5>
+        <div class="flex gap-10 flex-wrap">
+          <div class="flex flex-col gap-2">
+            <h5 class="text-[10px] font-semibold uppercase tracking-widest text-[#3f3f46]">Projects</h5>
             <a href="https://github.com/ainjiner/ai-lab" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">AI Lab</a>
             <a href="https://github.com/ainjiner/2USE" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">2USE</a>
             <a href="https://github.com/ainjiner/we-will-shine" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">We Will Shine</a>
           </div>
-          <div class="flex flex-col gap-2.5">
-            <h5 class="text-[10px] font-semibold uppercase tracking-widest text-[#52525b]">Support</h5>
+          <div class="flex flex-col gap-2">
+            <h5 class="text-[10px] font-semibold uppercase tracking-widest text-[#3f3f46]">Support</h5>
             <a href="https://github.com/sponsors/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">GitHub Sponsors</a>
             <a href="https://opencollective.com/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Open Collective</a>
             <a href="https://ko-fi.com/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Ko-fi</a>
             <a href="https://trakteer.id/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Trakteer</a>
           </div>
-          <div class="flex flex-col gap-2.5">
-            <h5 class="text-[10px] font-semibold uppercase tracking-widest text-[#52525b]">Contact</h5>
-            <a href="https://github.com/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">GitHub</a>
+          <div class="flex flex-col gap-2">
+            <h5 class="text-[10px] font-semibold uppercase tracking-widest text-[#3f3f46]">Contact</h5>
             <a href="mailto:hello@ainjiner.ai" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">hello@ainjiner.ai</a>
-            <a href="https://ainjiner.ai" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">ainjiner.ai</a>
+            <a href="https://github.com/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">GitHub</a>
           </div>
         </div>
       </div>
-
-      <div class="border-t border-[#27272a] pt-6 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-        <p class="text-[11px] text-[#52525b]">© 2025 Ainjiner. All projects released under the MIT License.</p>
-        <p class="text-[11px] text-[#52525b]">Made with care in Indonesia 🇮🇩</p>
+      <div class="border-t border-[#18181b] pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+        <p class="text-[11px] text-[#3f3f46]">© 2025 Ainjiner. All projects MIT Licensed.</p>
+        <p class="text-[11px] text-[#3f3f46]">Made with care in Indonesia 🇮🇩</p>
       </div>
     </div>
   </footer>

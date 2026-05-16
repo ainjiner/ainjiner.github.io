@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ainjiner.ai',
+  site: 'https://ainjiner.github.io',
   output: 'static',
 
   vite: {
