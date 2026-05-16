@@ -381,13 +381,33 @@ import '../styles/global.css';
             </div>
           ))}
         </div>
-        <div class="mt-6 rounded-xl border border-[#8b5cf6]/20 bg-[#8b5cf6]/5 p-4">
+        <div class="mt-6 rounded-xl border border-[#8b5cf6]/20 bg-[#8b5cf6]/5 p-5 flex flex-col gap-4">
           <p class="text-xs text-[#a1a1aa] leading-relaxed">
             <span class="font-medium text-[#a78bfa]">Know a program officer or grant committee?</span>{' '}
             We can provide a research brief, technical documentation, or a live demo for any of these applications.
             Reach out at{' '}
             <a href="mailto:hello@ainjiner.ai" class="text-[#a78bfa] border-b border-[#8b5cf6]/30 hover:border-[#8b5cf6] transition-colors">hello@ainjiner.ai</a>.
           </p>
+          <div class="flex flex-wrap gap-2">
+            {[
+              { label: 'Funding Guide', href: 'https://github.com/ainjiner/ainjiner.github.io/blob/main/FUNDING-GUIDE.md' },
+              { label: 'Research Brief', href: 'https://github.com/ainjiner/ainjiner.github.io/blob/main/RESEARCH.md' },
+              { label: 'Partnerships', href: 'https://github.com/ainjiner/ainjiner.github.io/blob/main/PARTNERSHIPS.md' },
+              { label: 'Roadmap', href: 'https://github.com/ainjiner/ainjiner.github.io/blob/main/docs/ROADMAP.md' },
+              { label: 'Budget Plan', href: 'https://github.com/ainjiner/ainjiner.github.io/blob/main/docs/BUDGET.md' },
+              { label: 'Impact Statement', href: 'https://github.com/ainjiner/ainjiner.github.io/blob/main/docs/IMPACT.md' },
+            ].map(doc => (
+              <a
+                href={doc.href}
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center gap-1.5 rounded-lg border border-[#8b5cf6]/20 bg-[#09090b] px-3 py-1.5 text-[11px] font-medium text-[#a78bfa] hover:border-[#8b5cf6]/50 hover:bg-[#8b5cf6]/10 transition-colors"
+              >
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                {doc.label}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -533,6 +553,13 @@ import '../styles/global.css';
             <a href="https://opencollective.com/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Open Collective</a>
             <a href="https://ko-fi.com/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Ko-fi</a>
             <a href="https://trakteer.id/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Trakteer</a>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h5 class="text-[10px] font-semibold uppercase tracking-widest text-[#3f3f46]">Docs</h5>
+            <a href="https://github.com/ainjiner/ainjiner.github.io/blob/main/FUNDING-GUIDE.md" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Funding Guide</a>
+            <a href="https://github.com/ainjiner/ainjiner.github.io/blob/main/RESEARCH.md" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Research Brief</a>
+            <a href="https://github.com/ainjiner/ainjiner.github.io/blob/main/PARTNERSHIPS.md" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Partnerships</a>
+            <a href="https://github.com/ainjiner/ainjiner.github.io/blob/main/docs/ROADMAP.md" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Roadmap</a>
           </div>
           <div class="flex flex-col gap-2">
             <h5 class="text-[10px] font-semibold uppercase tracking-widest text-[#3f3f46]">Contact</h5>
