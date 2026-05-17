@@ -9,34 +9,77 @@ import '../styles/global.css';
 >
   <!-- NAV -->
   <header class="sticky top-0 z-50 border-b border-[#27272a] bg-[#09090b]/80 backdrop-blur-xl">
-    <div class="mx-auto max-w-6xl px-6 h-14 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2.5 font-semibold text-sm tracking-tight">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 h-14 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2.5 font-semibold text-sm tracking-tight min-h-[44px]">
         <svg width="26" height="26" viewBox="0 0 64 64" fill="none">
           <rect width="64" height="64" rx="14" fill="#8b5cf6"/>
           <text x="32" y="45" font-family="Georgia,serif" font-size="36" font-weight="700" fill="white" text-anchor="middle">A</text>
         </svg>
         <span class="text-[#fafafa]">ainjiner</span>
       </a>
-      <nav class="flex items-center gap-1">
-        <a href="#projects"  class="px-3 py-1.5 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors hidden sm:inline-flex">Projects</a>
-        <a href="#impact"    class="px-3 py-1.5 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors hidden sm:inline-flex">Impact</a>
-        <a href="#research"  class="px-3 py-1.5 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors hidden sm:inline-flex">Research</a>
-        <a href="#support"   class="px-3 py-1.5 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors">Support</a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden sm:flex items-center gap-1">
+        <a href="#projects" class="px-3 py-2 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors min-h-[44px] inline-flex items-center">Projects</a>
+        <a href="#impact"   class="px-3 py-2 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors min-h-[44px] inline-flex items-center">Impact</a>
+        <a href="#research" class="px-3 py-2 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors min-h-[44px] inline-flex items-center">Research</a>
+        <a href="#support"  class="px-3 py-2 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors min-h-[44px] inline-flex items-center">Support</a>
         <a href="mailto:hello@ainjiner.ai"
-           class="ml-2 flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-white bg-[#8b5cf6] rounded-lg hover:bg-[#7c3aed] transition-colors">
+           class="ml-2 flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-white bg-[#8b5cf6] rounded-lg hover:bg-[#7c3aed] transition-colors min-h-[44px]">
           Contact Us
         </a>
       </nav>
+
+      <!-- Mobile: Contact CTA + hamburger -->
+      <div class="flex items-center gap-2 sm:hidden">
+        <a href="mailto:hello@ainjiner.ai"
+           class="flex items-center px-3 py-2 text-xs font-medium text-white bg-[#8b5cf6] rounded-lg hover:bg-[#7c3aed] transition-colors min-h-[44px]">
+          Contact
+        </a>
+        <button
+          data-nav-toggle
+          aria-expanded="false"
+          aria-label="Toggle menu"
+          class="flex items-center justify-center w-11 h-11 rounded-md text-[#a1a1aa] hover:text-[#fafafa] hover:bg-[#18181b] transition-colors"
+        >
+          <!-- Hamburger icon -->
+          <svg data-icon-open width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          <!-- Close icon -->
+          <svg data-icon-close class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
     </div>
+
+    <!-- Mobile menu drawer -->
+    <nav
+      data-nav-menu
+      class="hidden sm:hidden border-t border-[#27272a] bg-[#09090b] px-4 pb-4"
+    >
+      <div class="flex flex-col pt-2 gap-1">
+        <a href="#projects" data-nav-link class="px-3 py-3 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors min-h-[44px] flex items-center">Projects</a>
+        <a href="#impact"   data-nav-link class="px-3 py-3 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors min-h-[44px] flex items-center">Impact</a>
+        <a href="#research" data-nav-link class="px-3 py-3 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors min-h-[44px] flex items-center">Research</a>
+        <a href="#support"  data-nav-link class="px-3 py-3 text-sm text-[#a1a1aa] hover:text-[#fafafa] rounded-md hover:bg-[#18181b] transition-colors min-h-[44px] flex items-center">Support</a>
+      </div>
+    </nav>
   </header>
 
   <!-- HERO -->
-  <section class="relative overflow-hidden px-6 pt-24 pb-20 text-center">
-    <div class="pointer-events-none absolute inset-0 flex items-start justify-center">
-      <div class="mt-[-80px] h-[500px] w-[900px] rounded-full bg-[#8b5cf6]/10 blur-[130px]"></div>
+  <section class="relative overflow-hidden px-4 sm:px-6 pt-20 pb-16 sm:pt-24 sm:pb-20 text-center">
+    <!-- Glow blob — capped to viewport width -->
+    <div class="pointer-events-none absolute inset-0 flex items-start justify-center overflow-hidden">
+      <div class="mt-[-80px] h-[400px] sm:h-[500px] w-full max-w-[900px] rounded-full bg-[#8b5cf6]/10 blur-[100px] sm:blur-[130px]"></div>
     </div>
-    <div class="pointer-events-none absolute inset-0 opacity-[0.025]"
-      style="background-image: radial-gradient(#fafafa 1px, transparent 1px); background-size: 28px 28px;"></div>
+    <!-- Dot grid — slightly larger on mobile to avoid noise -->
+    <div class="pointer-events-none absolute inset-0 opacity-[0.02]"
+      style="background-image: radial-gradient(#fafafa 1px, transparent 1px); background-size: 32px 32px;"></div>
 
     <div class="relative mx-auto max-w-3xl">
       <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-[#8b5cf6]/25 bg-[#8b5cf6]/10 px-4 py-1.5 text-xs font-medium text-[#a78bfa]">
@@ -44,40 +87,41 @@ import '../styles/global.css';
         Seeking Donors · Research Partners · Institutional Funding
       </div>
 
-      <h1 class="mb-5 text-4xl font-bold tracking-tight text-[#fafafa] sm:text-5xl md:text-[3.5rem] leading-[1.08]">
-        Open-source AI tools<br/>
-        <span class="bg-gradient-to-br from-[#a78bfa] via-[#818cf8] to-[#60a5fa] bg-clip-text text-transparent">
+      <h1 class="mb-5 font-bold tracking-tight text-[#fafafa] leading-[1.08]" style="font-size: clamp(2rem, 5vw, 3.5rem);">
+        Open-source AI tools
+        <span class="bg-gradient-to-br from-[#a78bfa] via-[#818cf8] to-[#60a5fa] bg-clip-text text-transparent block sm:inline">
           built for Indonesia
         </span>
       </h1>
 
-      <p class="mx-auto mb-4 max-w-2xl text-base text-[#a1a1aa] leading-relaxed sm:text-lg">
+      <p class="mx-auto mb-4 max-w-2xl text-sm sm:text-base text-[#a1a1aa] leading-relaxed">
         We build free, open-source AI infrastructure and education tools for underserved communities.
         Three active projects. Real students and educators as users. Zero external funding — yet.
       </p>
-      <p class="mx-auto mb-9 max-w-xl text-sm text-[#71717a] leading-relaxed">
+      <p class="mx-auto mb-8 sm:mb-9 max-w-xl text-sm text-[#71717a] leading-relaxed">
         Your support — whether a donation, a research grant, or a partnership — directly accelerates
         tools that help Indonesian students think critically, find their path, and access AI without dependency.
       </p>
 
-      <div class="flex flex-wrap items-center justify-center gap-3 mb-16">
+      <!-- CTA buttons — stacked on mobile, row on sm+ -->
+      <div class="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 mb-14 sm:mb-16">
         <a href="#support"
-           class="inline-flex items-center gap-2 rounded-xl bg-[#8b5cf6] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#8b5cf6]/25 hover:bg-[#7c3aed] transition-all hover:-translate-y-px">
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#8b5cf6] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#8b5cf6]/25 hover:bg-[#7c3aed] transition-all hover:-translate-y-px min-h-[44px]">
           Support This Work
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <a href="#research"
-           class="inline-flex items-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-6 py-3 text-sm font-medium text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#3f3f46] transition-all hover:-translate-y-px">
-          Research & Grants
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-6 py-3 text-sm font-medium text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#3f3f46] transition-all hover:-translate-y-px min-h-[44px]">
+          Research &amp; Grants
         </a>
         <a href="#projects"
-           class="inline-flex items-center gap-2 rounded-xl border border-[#27272a] bg-transparent px-6 py-3 text-sm font-medium text-[#71717a] hover:text-[#a1a1aa] hover:border-[#3f3f46] transition-all">
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-[#27272a] bg-transparent px-6 py-3 text-sm font-medium text-[#71717a] hover:text-[#a1a1aa] hover:border-[#3f3f46] transition-all min-h-[44px]">
           Explore Projects
         </a>
       </div>
 
-      <!-- trust bar -->
-      <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+      <!-- Trust bar -->
+      <div class="flex flex-wrap items-center justify-center gap-x-8 sm:gap-x-10 gap-y-4">
         <div class="text-center">
           <div class="text-2xl font-bold text-[#fafafa] tracking-tight">3</div>
           <div class="text-xs text-[#71717a] mt-0.5">Active Projects</div>
@@ -102,20 +146,21 @@ import '../styles/global.css';
   </section>
 
   <!-- WHY FUND US -->
-  <section id="impact" class="border-y border-[#27272a] bg-[#0f0f11] px-6 py-20">
+  <section id="impact" class="border-y border-[#27272a] bg-[#0f0f11] px-4 sm:px-6 py-12 sm:py-20 scroll-mt-14">
     <div class="mx-auto max-w-6xl">
-      <div class="mb-14 text-center">
+      <div class="mb-10 sm:mb-14 text-center">
         <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-xs text-[#71717a]">
           Why Fund Us
         </div>
-        <h2 class="mb-3 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">The problem we are solving</h2>
-        <p class="mx-auto max-w-xl text-[#a1a1aa] text-base leading-relaxed">
+        <h2 class="mb-3 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#fafafa]">The problem we are solving</h2>
+        <p class="mx-auto max-w-xl text-[#a1a1aa] text-sm sm:text-base leading-relaxed">
           Indonesia has 277 million people, 45 million students, and a fast-growing AI sector —
           but almost no open-source AI tooling built for its context.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-3 mb-10">
+      <!-- Impact cards: 1 col → 2 col (sm) → 3 col (lg) -->
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-8 sm:mb-10">
         <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-6">
           <div class="mb-4 text-3xl font-bold text-[#a78bfa]">45M+</div>
           <h4 class="mb-2 text-sm font-semibold text-[#fafafa]">Students in Indonesia</h4>
@@ -132,7 +177,7 @@ import '../styles/global.css';
             actively teaches Socratic thinking before providing answers.
           </p>
         </div>
-        <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-6">
+        <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-6 sm:col-span-2 lg:col-span-1">
           <div class="mb-4 text-3xl font-bold text-[#34d399]">$0</div>
           <h4 class="mb-2 text-sm font-semibold text-[#fafafa]">External funding received</h4>
           <p class="text-xs text-[#71717a] leading-relaxed">
@@ -142,9 +187,9 @@ import '../styles/global.css';
         </div>
       </div>
 
-      <!-- what funding unlocks -->
-      <div class="rounded-2xl border border-[#8b5cf6]/20 bg-[#8b5cf6]/5 p-8">
-        <h3 class="mb-6 text-base font-semibold text-[#fafafa]">What your funding unlocks</h3>
+      <!-- What funding unlocks: 1 → 2 (sm) → 4 (lg) -->
+      <div class="rounded-2xl border border-[#8b5cf6]/20 bg-[#8b5cf6]/5 p-6 sm:p-8">
+        <h3 class="mb-5 sm:mb-6 text-sm sm:text-base font-semibold text-[#fafafa]">What your funding unlocks</h3>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: '⚡', label: 'Full-time dev', desc: 'Move from nights-and-weekends to full-time shipping' },
@@ -166,22 +211,23 @@ import '../styles/global.css';
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="px-6 py-20">
+  <section id="projects" class="px-4 sm:px-6 py-12 sm:py-20 scroll-mt-14">
     <div class="mx-auto max-w-6xl">
-      <div class="mb-14 text-center">
+      <div class="mb-10 sm:mb-14 text-center">
         <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-xs text-[#71717a]">
           The Projects
         </div>
-        <h2 class="mb-3 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">Three tools, one mission</h2>
-        <p class="mx-auto max-w-lg text-[#a1a1aa] text-base leading-relaxed">
+        <h2 class="mb-3 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#fafafa]">Three tools, one mission</h2>
+        <p class="mx-auto max-w-lg text-[#a1a1aa] text-sm sm:text-base leading-relaxed">
           Making AI development and education more humane, transparent, and accessible.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+      <!-- Project cards: 1 col → 2 col (md) → 3 col (lg) -->
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 
         <!-- 2USE — highlighted as primary funding target -->
-        <article class="group relative flex flex-col rounded-2xl border border-[#f59e0b]/30 bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-[#f59e0b]/5 md:col-span-1">
+        <article class="group relative flex flex-col rounded-2xl border border-[#f59e0b]/30 bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-[#f59e0b]/5">
           <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#f59e0b]/60 to-transparent rounded-t-2xl"></div>
           <div class="absolute top-4 right-4">
             <span class="rounded-full bg-[#f59e0b]/15 border border-[#f59e0b]/30 px-2 py-0.5 text-[10px] font-semibold text-[#fbbf24] uppercase tracking-wider">Core Focus</span>
@@ -219,7 +265,7 @@ import '../styles/global.css';
             </p>
           </div>
           <a href="https://github.com/ainjiner/2USE" target="_blank" rel="noopener"
-             class="flex items-center justify-center gap-2 rounded-xl border border-[#f59e0b]/25 bg-[#18181b] px-4 py-2.5 text-xs font-medium text-[#a1a1aa] hover:border-[#f59e0b]/50 hover:text-[#fbbf24] transition-colors">
+             class="flex items-center justify-center gap-2 rounded-xl border border-[#f59e0b]/25 bg-[#18181b] px-4 py-2.5 text-xs font-medium text-[#a1a1aa] hover:border-[#f59e0b]/50 hover:text-[#fbbf24] transition-colors min-h-[44px]">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             View on GitHub
           </a>
@@ -256,12 +302,12 @@ import '../styles/global.css';
           </ul>
           <div class="flex gap-2">
             <a href="https://github.com/ainjiner/we-will-shine" target="_blank" rel="noopener"
-               class="flex flex-1 items-center justify-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-4 py-2.5 text-xs font-medium text-[#a1a1aa] hover:border-[#10b981]/40 hover:text-[#34d399] transition-colors">
+               class="flex flex-1 items-center justify-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-4 py-2.5 text-xs font-medium text-[#a1a1aa] hover:border-[#10b981]/40 hover:text-[#34d399] transition-colors min-h-[44px]">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
               GitHub
             </a>
             <a href="https://ainjiner.github.io/we-will-shine/" target="_blank" rel="noopener"
-               class="flex items-center justify-center gap-1.5 rounded-xl border border-[#10b981]/25 bg-[#10b981]/10 px-4 py-2.5 text-xs font-medium text-[#34d399] hover:bg-[#10b981]/20 transition-colors">
+               class="flex items-center justify-center gap-1.5 rounded-xl border border-[#10b981]/25 bg-[#10b981]/10 px-4 py-2.5 text-xs font-medium text-[#34d399] hover:bg-[#10b981]/20 transition-colors min-h-[44px]">
               Live Demo
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
             </a>
@@ -269,7 +315,7 @@ import '../styles/global.css';
         </article>
 
         <!-- AI Lab -->
-        <article class="group relative flex flex-col rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#8b5cf6]/40 hover:shadow-xl hover:shadow-[#8b5cf6]/5">
+        <article class="group relative flex flex-col rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#8b5cf6]/40 hover:shadow-xl hover:shadow-[#8b5cf6]/5 md:col-span-2 lg:col-span-1">
           <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8b5cf6]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-t-2xl"></div>
           <div class="mb-4 flex items-start justify-between">
             <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#8b5cf6] to-[#6d28d9] shadow-lg shadow-[#8b5cf6]/20">
@@ -297,7 +343,7 @@ import '../styles/global.css';
             ))}
           </ul>
           <a href="https://github.com/ainjiner/ai-lab" target="_blank" rel="noopener"
-             class="flex items-center justify-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-4 py-2.5 text-xs font-medium text-[#a1a1aa] hover:border-[#8b5cf6]/40 hover:text-[#a78bfa] transition-colors">
+             class="flex items-center justify-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-4 py-2.5 text-xs font-medium text-[#a1a1aa] hover:border-[#8b5cf6]/40 hover:text-[#a78bfa] transition-colors min-h-[44px]">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             View on GitHub
           </a>
@@ -307,21 +353,21 @@ import '../styles/global.css';
   </section>
 
   <!-- RESEARCH & GRANTS -->
-  <section id="research" class="border-y border-[#27272a] bg-[#0f0f11] px-6 py-20">
+  <section id="research" class="border-y border-[#27272a] bg-[#0f0f11] px-4 sm:px-6 py-12 sm:py-20 scroll-mt-14">
     <div class="mx-auto max-w-6xl">
-      <div class="mb-14 text-center">
+      <div class="mb-10 sm:mb-14 text-center">
         <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-xs text-[#71717a]">
-          Research & Institutional Funding
+          Research &amp; Institutional Funding
         </div>
-        <h2 class="mb-3 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">For researchers & institutions</h2>
-        <p class="mx-auto max-w-xl text-[#a1a1aa] text-base leading-relaxed">
+        <h2 class="mb-3 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#fafafa]">For researchers &amp; institutions</h2>
+        <p class="mx-auto max-w-xl text-[#a1a1aa] text-sm sm:text-base leading-relaxed">
           Our projects sit at the intersection of AI, education, and social impact —
           making them strong candidates for academic research and institutional grants.
         </p>
       </div>
 
-      <!-- research angles -->
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-10">
+      <!-- Research angles: 1 → 2 (sm) → 3 (lg) -->
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-8 sm:mb-10">
         {[
           {
             color: '#f59e0b',
@@ -345,7 +391,7 @@ import '../styles/global.css';
             tags: ['LLMOps', 'Reproducibility', 'Open Infrastructure'],
           },
         ].map(item => (
-          <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-6 flex flex-col gap-4">
+          <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-6 flex flex-col gap-4 sm:col-span-1">
             <div class="flex items-center gap-3">
               <div class="text-2xl">{item.icon}</div>
               <h4 class="text-sm font-semibold text-[#fafafa]">{item.area}</h4>
@@ -360,9 +406,9 @@ import '../styles/global.css';
         ))}
       </div>
 
-      <!-- grant sources -->
-      <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-8">
-        <h3 class="mb-6 text-sm font-semibold text-[#fafafa]">Funding sources we are pursuing — and where you can help</h3>
+      <!-- Grant sources: 1 → 2 (sm) → 4 (lg) -->
+      <div class="rounded-2xl border border-[#27272a] bg-[#18181b] p-6 sm:p-8">
+        <h3 class="mb-5 sm:mb-6 text-sm font-semibold text-[#fafafa]">Funding sources we are pursuing — and where you can help</h3>
         <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { org: 'Ford Foundation', focus: 'Digital rights, education equity in Global South', fit: 'We Will Shine + 2USE' },
@@ -381,7 +427,7 @@ import '../styles/global.css';
             </div>
           ))}
         </div>
-        <div class="mt-6 rounded-xl border border-[#8b5cf6]/20 bg-[#8b5cf6]/5 p-5 flex flex-col gap-4">
+        <div class="mt-5 sm:mt-6 rounded-xl border border-[#8b5cf6]/20 bg-[#8b5cf6]/5 p-4 sm:p-5 flex flex-col gap-4">
           <p class="text-xs text-[#a1a1aa] leading-relaxed">
             <span class="font-medium text-[#a78bfa]">Know a program officer or grant committee?</span>{' '}
             We can provide a research brief, technical documentation, or a live demo for any of these applications.
@@ -401,7 +447,7 @@ import '../styles/global.css';
                 href={doc.href}
                 target="_blank"
                 rel="noopener"
-                class="inline-flex items-center gap-1.5 rounded-lg border border-[#8b5cf6]/20 bg-[#09090b] px-3 py-1.5 text-[11px] font-medium text-[#a78bfa] hover:border-[#8b5cf6]/50 hover:bg-[#8b5cf6]/10 transition-colors"
+                class="inline-flex items-center gap-1.5 rounded-lg border border-[#8b5cf6]/20 bg-[#09090b] px-3 py-1.5 text-[11px] font-medium text-[#a78bfa] hover:border-[#8b5cf6]/50 hover:bg-[#8b5cf6]/10 transition-colors min-h-[36px]"
               >
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                 {doc.label}
@@ -414,19 +460,20 @@ import '../styles/global.css';
   </section>
 
   <!-- SUPPORT / DONATE -->
-  <section id="support" class="px-6 py-20">
+  <section id="support" class="px-4 sm:px-6 py-12 sm:py-20 scroll-mt-14">
     <div class="mx-auto max-w-6xl">
-      <div class="mb-14 text-center">
+      <div class="mb-10 sm:mb-14 text-center">
         <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-xs text-[#71717a]">
-          Donate & Sponsor
+          Donate &amp; Sponsor
         </div>
-        <h2 class="mb-3 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">Support our work</h2>
-        <p class="mx-auto max-w-lg text-[#a1a1aa] text-base leading-relaxed">
+        <h2 class="mb-3 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#fafafa]">Support our work</h2>
+        <p class="mx-auto max-w-lg text-[#a1a1aa] text-sm sm:text-base leading-relaxed">
           All projects are free and open source. Donations go directly to development, infrastructure,
           and community outreach. 100% transparent via Open Collective.
         </p>
       </div>
 
+      <!-- Donate cards: 1 → 2 (sm) → 4 (lg) -->
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-6">
         <a href="https://github.com/sponsors/ainjiner" target="_blank" rel="noopener"
            class="group flex flex-col gap-4 rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 transition-all hover:-translate-y-1 hover:border-[#ec4899]/40 hover:shadow-lg hover:shadow-[#ec4899]/5">
@@ -485,7 +532,7 @@ import '../styles/global.css';
         </a>
       </div>
 
-      <div class="rounded-2xl border border-[#27272a] bg-[#0f0f11] p-6 text-center">
+      <div class="rounded-2xl border border-[#27272a] bg-[#0f0f11] p-5 sm:p-6 text-center">
         <p class="text-sm text-[#71717a] leading-relaxed">
           Not ready to donate? Star{' '}
           <a href="https://github.com/ainjiner/ai-lab" target="_blank" rel="noopener" class="text-[#a78bfa] border-b border-[#8b5cf6]/30 hover:border-[#8b5cf6] transition-colors">AI Lab</a>,{' '}
@@ -499,26 +546,26 @@ import '../styles/global.css';
   </section>
 
   <!-- CONTACT / PARTNERSHIP CTA -->
-  <section class="border-t border-[#27272a] bg-[#0f0f11] px-6 py-20">
+  <section class="border-t border-[#27272a] bg-[#0f0f11] px-4 sm:px-6 py-12 sm:py-20">
     <div class="mx-auto max-w-3xl text-center">
       <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-xs text-[#71717a]">
         Get in Touch
       </div>
-      <h2 class="mb-4 text-3xl font-bold tracking-tight text-[#fafafa] sm:text-4xl">
-        Let's build something<br/>that matters
+      <h2 class="mb-4 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#fafafa]">
+        Let's build something<br class="hidden sm:block"/> that matters
       </h2>
-      <p class="mb-10 text-[#a1a1aa] text-base leading-relaxed max-w-xl mx-auto">
+      <p class="mb-8 sm:mb-10 text-[#a1a1aa] text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
         Whether you're a donor, a researcher, a university, an NGO, or a developer who wants to contribute —
         we'd love to hear from you.
       </p>
-      <div class="flex flex-wrap items-center justify-center gap-4">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
         <a href="mailto:hello@ainjiner.ai"
-           class="inline-flex items-center gap-2 rounded-xl bg-[#fafafa] px-6 py-3 text-sm font-semibold text-[#09090b] hover:bg-[#e4e4e7] transition-all hover:-translate-y-px shadow-lg">
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#fafafa] px-6 py-3 text-sm font-semibold text-[#09090b] hover:bg-[#e4e4e7] transition-all hover:-translate-y-px shadow-lg min-h-[44px]">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           hello@ainjiner.ai
         </a>
         <a href="https://github.com/ainjiner" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-6 py-3 text-sm font-medium text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#3f3f46] transition-all hover:-translate-y-px">
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-[#27272a] bg-[#18181b] px-6 py-3 text-sm font-medium text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#3f3f46] transition-all hover:-translate-y-px min-h-[44px]">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
           github.com/ainjiner
         </a>
@@ -527,7 +574,7 @@ import '../styles/global.css';
   </section>
 
   <!-- FOOTER -->
-  <footer class="border-t border-[#27272a] bg-[#09090b] px-6 pt-10 pb-8">
+  <footer class="border-t border-[#27272a] bg-[#09090b] px-4 sm:px-6 pt-10 pb-8">
     <div class="mx-auto max-w-6xl">
       <div class="mb-8 flex flex-col gap-8 sm:flex-row sm:justify-between">
         <div class="flex flex-col gap-2">
@@ -540,31 +587,33 @@ import '../styles/global.css';
           </a>
           <p class="text-xs text-[#52525b] leading-relaxed max-w-[180px]">AI Engineering Organization · Indonesia 🇮🇩</p>
         </div>
-        <div class="flex gap-10 flex-wrap">
+
+        <!-- Footer links: 2×2 grid on mobile, row on sm+ -->
+        <div class="grid grid-cols-2 gap-x-8 gap-y-6 sm:flex sm:gap-10">
           <div class="flex flex-col gap-2">
             <h5 class="text-[10px] font-semibold uppercase tracking-widest text-[#3f3f46]">Projects</h5>
-            <a href="https://github.com/ainjiner/ai-lab" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">AI Lab</a>
-            <a href="https://github.com/ainjiner/2USE" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">2USE</a>
-            <a href="https://github.com/ainjiner/we-will-shine" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">We Will Shine</a>
+            <a href="https://github.com/ainjiner/ai-lab" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">AI Lab</a>
+            <a href="https://github.com/ainjiner/2USE" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">2USE</a>
+            <a href="https://github.com/ainjiner/we-will-shine" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">We Will Shine</a>
           </div>
           <div class="flex flex-col gap-2">
             <h5 class="text-[10px] font-semibold uppercase tracking-widest text-[#3f3f46]">Support</h5>
-            <a href="https://github.com/sponsors/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">GitHub Sponsors</a>
-            <a href="https://opencollective.com/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Open Collective</a>
-            <a href="https://ko-fi.com/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Ko-fi</a>
-            <a href="https://trakteer.id/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Trakteer</a>
+            <a href="https://github.com/sponsors/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">GitHub Sponsors</a>
+            <a href="https://opencollective.com/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">Open Collective</a>
+            <a href="https://ko-fi.com/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">Ko-fi</a>
+            <a href="https://trakteer.id/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">Trakteer</a>
           </div>
           <div class="flex flex-col gap-2">
             <h5 class="text-[10px] font-semibold uppercase tracking-widest text-[#3f3f46]">Docs</h5>
-            <a href="https://github.com/ainjiner/ainjiner.github.io/blob/main/FUNDING-GUIDE.md" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Funding Guide</a>
-            <a href="https://github.com/ainjiner/ainjiner.github.io/blob/main/RESEARCH.md" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Research Brief</a>
-            <a href="https://github.com/ainjiner/ainjiner.github.io/blob/main/PARTNERSHIPS.md" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Partnerships</a>
-            <a href="https://github.com/ainjiner/ainjiner.github.io/blob/main/docs/ROADMAP.md" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">Roadmap</a>
+            <a href="https://github.com/ainjiner/ainjiner.github.io/blob/main/FUNDING-GUIDE.md" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">Funding Guide</a>
+            <a href="https://github.com/ainjiner/ainjiner.github.io/blob/main/RESEARCH.md" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">Research Brief</a>
+            <a href="https://github.com/ainjiner/ainjiner.github.io/blob/main/PARTNERSHIPS.md" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">Partnerships</a>
+            <a href="https://github.com/ainjiner/ainjiner.github.io/blob/main/docs/ROADMAP.md" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">Roadmap</a>
           </div>
           <div class="flex flex-col gap-2">
             <h5 class="text-[10px] font-semibold uppercase tracking-widest text-[#3f3f46]">Contact</h5>
-            <a href="mailto:hello@ainjiner.ai" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">hello@ainjiner.ai</a>
-            <a href="https://github.com/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">GitHub</a>
+            <a href="mailto:hello@ainjiner.ai" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">hello@ainjiner.ai</a>
+            <a href="https://github.com/ainjiner" target="_blank" rel="noopener" class="text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors py-0.5">GitHub</a>
           </div>
         </div>
       </div>
@@ -574,4 +623,42 @@ import '../styles/global.css';
       </div>
     </div>
   </footer>
+
+  <!-- Mobile nav toggle script -->
+  <script>
+    const toggle = document.querySelector('[data-nav-toggle]') as HTMLButtonElement;
+    const menu = document.querySelector('[data-nav-menu]') as HTMLElement;
+    const iconOpen = document.querySelector('[data-icon-open]') as SVGElement;
+    const iconClose = document.querySelector('[data-icon-close]') as SVGElement;
+    const navLinks = document.querySelectorAll('[data-nav-link]');
+
+    function openMenu() {
+      menu.classList.remove('hidden');
+      iconOpen.classList.add('hidden');
+      iconClose.classList.remove('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      menu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    toggle?.addEventListener('click', () => {
+      const isOpen = !menu.classList.contains('hidden');
+      isOpen ? closeMenu() : openMenu();
+    });
+
+    // Close menu when a nav link is clicked
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  </script>
 </Base>
